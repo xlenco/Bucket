@@ -1,0 +1,37 @@
+{
+    "version": "3.0.0.8",
+    "description": "Xbox download assistant, supports Xbox, Microsoft Store, PS, NS, EA Desktop & Origin, Battle.net, Epic game download acceleration",
+    "homepage": "https://github.com/skydevil88/XboxDownload",
+    "license": "Unknown",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/skydevil88/XboxDownload/releases/download/v3.0.0.8/XboxDownload-windows-x64.zip",
+            "hash": "c4771ca85f17bcfcaf46c29bab51ade34ecc45bd79d5d9b0456019b1a3b4dd27"
+        },
+        "arm64": {
+            "url": "https://github.com/skydevil88/XboxDownload/releases/download/v3.0.0.8/XboxDownload-windows-arm64.zip",
+            "hash": "2d3c1f3d37c6bb61de74e4cc817832b24698e055281a1034f71db9209d28b46b"
+        }
+    },
+    "bin": "XboxDownload.exe",
+    "shortcuts": [
+        [
+            "XboxDownload.exe",
+            "Xbox Download"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/skydevil88/XboxDownload",
+        "regex": "tag/v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/skydevil88/XboxDownload/releases/download/v$version/XboxDownload-windows-x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/skydevil88/XboxDownload/releases/download/v$version/XboxDownload-windows-arm64.zip"
+            }
+        }
+    }
+}
